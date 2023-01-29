@@ -1,0 +1,65 @@
+// 500px
+@include xsm-sm  {
+    h1 {
+        font-size: 20px;
+        line-height: 29px;
+    }
+    h2 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+ 
+    .button {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 10px 20px;
+    }
+    .timePicker {
+        max-width: 180px;
+        padding: 0 22px;
+    }
+    @include intro-xsm-sm;
+}
+// 430px
+@include xxsm-xsm  {
+    h1 {
+        font-size: 22px;
+        line-height: 31px;
+    }
+    .button {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .checkbox {
+        align-self: flex-end;
+    }
+    .timePicker {
+        width: 100%;
+        max-width: 200px;
+        padding: 0 24px;
+        margin: 0 auto 14px;
+        justify-content: center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include intro-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm  {
+    h2 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .tooltip {
+        p {
+            left: -50px;
+            transform: translate(0);
+            &::before {
+                left: 35%;
+            }
+        }
+    }
+    @include intro-xxxsm-xxsm;
+}
+

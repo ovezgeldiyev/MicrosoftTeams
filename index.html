@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Microsoft Teams Status</title>
+  </head>
+  <body>
+    <main>
+      <!-- intro start
+    =========================================== -->
+      <section class="intro">
+        <div class="auto__container">
+          <form action="" class="intro__inner">
+            <div class="intro__inner-header">
+              <h1>
+                <span>
+                  <img src="./images/logo.svg" alt="" />
+                </span>
+                Microsoft Teams Status
+              </h1>
+              <label for="enable" class="checkbox">
+                Enable
+                <div class="checkbox__button">
+                  <input type="checkbox" id="enable" checked />
+                  <span></span>
+                </div>
+              </label>
+            </div>
+            <div class="intro__inner-row">
+              <div class="intro__inner-col">
+                <h2>Online Status</h2>
+                <label for="available" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" name="status" id="available" checked />
+                    <span></span>
+                  </div>
+                  Available
+                  <span>
+                    <img src="./images/icons/available.png" alt="" />
+                  </span>
+                </label>
+                <label for="busy" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" name="status" id="busy" />
+                    <span></span>
+                  </div>
+                  Busy
+                  <span>
+                    <img src="./images/icons/busy.png" alt="" />
+                  </span>
+                </label>
+                <label for="disturb" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" name="status" id="disturb" />
+                    <span></span>
+                  </div>
+                  Do not disturb
+                  <span>
+                    <img src="./images/icons/dontDistrurb.png" alt="" />
+                  </span>
+                </label>
+                <label for="back" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" name="status" id="back" />
+                    <span></span>
+                  </div>
+                  Be right back
+                  <span>
+                    <img src="./images/icons/back.png" alt="" />
+                  </span>
+                </label>
+                <label for="away" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" name="status" id="away" />
+                    <span></span>
+                  </div>
+                  Appear away
+                  <span>
+                    <img src="./images/icons/away.png" alt="" />
+                  </span>
+                </label>
+                <label for="offline" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" name="status" id="offline" />
+                    <span></span>
+                  </div>
+                  Appear offline
+                  <span>
+                    <img src="./images/icons/offline.png" alt="" />
+                  </span>
+                </label>
+              </div>
+              <div class="intro__inner-col">
+                <h2>
+                  Log
+                  <div class="tooltip">
+                    <p id="tooltipText">
+                      When active this counter will update every 2 mins
+                    </p>
+                    <span id="tooltipBtn">
+                      <img src="./images/icons/info.svg" alt="">
+                    </span>
+                  </div>
+                </h2>
+                <div class="reset">
+                    <div class="reset__number">
+                      <input type="number" min="0" id="resetInput" value="0">
+                    </div>
+                    <button type="button" id="resetBtn">
+                      Reset
+                    </button>
+                </div>
+                <h2>
+                  Subscription
+                </h2>
+                <a href="#" class="button secondary">
+                  Manage Subscription
+                </a>
+                <a href="#" class="button uniq">
+                  5 Day Free Trial
+                </a>
+              </div>
+            </div>
+            <div class="intro__inner-row">
+              <h2 class="long">
+                Preferences
+              </h2>
+              <div class="timePicker">
+                <div class="timePicker__col">
+                  <button type="button" class="hoursUpBtn">
+                    <img src="./images/icons/arrow-up.svg" alt="">
+                  </button>
+                  <input type="number" class="hoursInput"  min="-1" max="13" value="09">
+                  <button type="button" class="hoursDownBtn">
+                    <img src="./images/icons/arrow-down.svg" alt="">
+                  </button>
+                </div>
+                <b>:</b> 
+                <div class="timePicker__col">
+                  <button type="button" class="minutesUpBtn">
+                    <img src="./images/icons/arrow-up.svg" alt="">
+                  </button>
+                  <input type="number" class="minutesInput" min="-1" max="60" value="00" step="1">
+                  <button type="button" class="minutesDownBtn">
+                    <img src="./images/icons/arrow-down.svg" alt="">
+                  </button>
+                </div>
+                <div class="timePicker__col">
+                  <button type="button" class="shiftUpBtn">
+                    <img src="./images/icons/arrow-up.svg" alt="">
+                  </button>
+                  <input type="text" disabled value="AM" class="shiftInput">
+                  <button type="button" class="shiftDownBtn">
+                    <img src="./images/icons/arrow-down.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="timePicker">
+                <div class="timePicker__col">
+                  <button type="button" class="hoursUpBtn">
+                    <img src="./images/icons/arrow-up.svg" alt="">
+                  </button>
+                  <input type="number" class="hoursInput"  min="00" max="12" value="05" step="1">
+                  <button type="button" class="hoursDownBtn">
+                    <img src="./images/icons/arrow-down.svg" alt="">
+                  </button>
+                </div>
+                <b>:</b> 
+                <div class="timePicker__col">
+                  <button type="button" class="minutesUpBtn">
+                    <img src="./images/icons/arrow-up.svg" alt="">
+                  </button>
+                  <input type="number" class="minutesInput" min="00" max="59" value="00" step="1">
+                  <button type="button" class="minutesDownBtn">
+                    <img src="./images/icons/arrow-down.svg" alt="">
+                  </button>
+                </div>
+                <div class="timePicker__col">
+                  <button type="button" class="shiftUpBtn">
+                    <img src="./images/icons/arrow-up.svg" alt="">
+                  </button>
+                  <input type="text" disabled value="PM" class="shiftInput">
+                  <button type="button" class="shiftDownBtn">
+                    <img src="./images/icons/arrow-down.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <label for="turnOn">
+              <div class="check">
+                <input type="checkbox" id="turnOn">
+                <span>
+                    <img src="./images/icons/tick.svg" alt="">
+                </span>
+              </div>
+              Turn on automatically during the following hours
+            </label>
+            <h2>
+              Teams URL
+            </h2>
+            <div class="input" id="teamInput">
+              <input type="text" value="https://teams.microsoft.com">
+            </div>
+            <p>
+              Only enter your teams url if you have a custom link to login  
+            </p>
+            <button type="submit" class="button primary">
+              Save Settings
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- intro end
+    =========================================== -->
+    </main>
+    <!-- js
+    =========================================== -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
